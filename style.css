@@ -11,17 +11,17 @@
 }
 .top-header{
  display: flex; 
- justify-content: space-around;  
+ justify-content: space-between;  
  padding: 15px  0;
 }
 h1{
     font-size:25px;
     margin-top:15px;
 }
-.darkmode{
+/* .darkmode{
     display: flex;
     width: 30%;
-}
+} */
 .moonIcon{
     width: 25%;
 }
@@ -36,12 +36,12 @@ h1{
 }
 .search-container{
     display:grid;
-    place-items: center;
+    /* place-items: center; */
     padding: 10px 0;
 }
 .search-input{
     padding: 10px 5px;
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
 }
 select{
@@ -78,27 +78,27 @@ select{
 }
 .country-description p {
     padding: 5px 5px;
-    font-size:16px
+    font-size:16px;
 }
-.country{
+/* .country{
     margin: 20px 0;
     padding: 0 0 10px 0;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10px;
     width: 100%;
-}
-.country-flag img{
+} */
+/* .country-flag img{
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-.country-details p {
+} */
+/* .country-details p {
     padding: 5px 5px;
     font-size:25px
-}
+} */
 
-@media (min-width: 658px) {
+@media (min-width: 768px) {
     .container{
         width: 80%;
         margin: auto;
@@ -118,8 +118,19 @@ select{
     }
     .country-cards{
         display:grid;
-        grid-template-columns: auto auto auto;
-        gap: 30px;
+        grid-template-columns: auto auto auto auto auto auto ;
+        gap: 10px;
+    }
+    .filter-container{
+        margin-top: 20px;
+    }
+    .flag img{
+        width: 100% ;
+        /* border: solid red; */
+    }
+    .flag{
+        /* border: solid green;  */
+        width: 100%;
     }
    h1{
        padding-top: 25px ;
@@ -129,22 +140,22 @@ select{
         margin-top:35px;
        
    }
-   .darkmode{
+   /* .darkmode{
         display: flex;
-   }
+   } */
    .moonIcon{
        width: 30%;
        margin-top:15px;
    }
-   .country{
+   /* .country{
         margin: 20px 0;
         padding: 0 0 10px 0;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
         border-radius: 10px;
         width: 70%;
-    }
-    .country-flag img{
+    } */
+    /* .country-flag img{
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -152,13 +163,17 @@ select{
     .country-details p {
         padding: 5px 5px;
         font-size:25px
+    } */
+    .btn{
+        font-size: 20px;
+        font-weight: 900px;
     }
 }
 @media (min-width: 1024px) {
-
+    
     .country-cards{
         display:grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto auto auto ;
         gap: 30px;
     }
     .moonIcon{
@@ -171,14 +186,14 @@ select{
    h1{
        font-size:30px
    }
-   .country{
+   /* .country{
         margin: 20px 0;
         padding: 0 0 10px 0;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
         border-radius: 10px;
         width: 60%;
-    }
+    } */
     .country-flag img{
         width: 100%;
         border-top-left-radius: 10px;

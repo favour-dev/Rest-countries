@@ -11,7 +11,7 @@
     border-radius: 3px;
     margin: 10px 10px;
 }
-.each-country{
+.country-card{
     margin: 10px 16px;
 }
 h3{
@@ -48,7 +48,7 @@ span{
 }
 
 @media (min-width: 658px) {
-    .each-country{
+    .country-card{
         display: flex;
         justify-content: space-around;
     }
@@ -68,20 +68,20 @@ span{
 }
 
 @media (min-width: 1024px) {
-    .each-country{
-        /* width: 100%; */
+    .country-card{
+        width: 100%;
         display: flex;
         justify-content: space-around;
     }
     .bottom-top{
         display: flex;
-        /* grid-template-columns: auto auto; */
+        grid-template-columns: auto auto;
         gap: 50px;
     }
     .countries-flag img{
         width: 100%;
         max-width: 700px;
         border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
+        border-top-right-radius: 10px; 
+    } 
 }
