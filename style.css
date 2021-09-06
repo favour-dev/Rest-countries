@@ -18,12 +18,16 @@ h1{
     font-size:25px;
     margin-top:15px;
 }
-/* .darkmode{
+a{
+    text-decoration:none;
+    color: black;
+}
+.darkmode{
     display: flex;
     width: 30%;
-} */
+}
 .moonIcon{
-    width: 25%;
+    width: 15%;
 }
 .dark{
     margin-top:10px;

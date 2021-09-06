@@ -15,7 +15,7 @@ let retrieveCLickedCountryDetails = countryList.find(
 );
 countriesDetail.innerHTML =`<div class="top-right">
      <div class="back-btn">
-         <button onclick="window.location.href="./index.html" class=" btn-primary"><< Back</button>
+         <button onclick="history.back()" class=" btn-primary"><< Back</button>
      </div>
     <div class="countries-flag">
         <img src=${retrieveCLickedCountryDetails.flag}>
@@ -33,18 +33,11 @@ countriesDetail.innerHTML =`<div class="top-right">
          </div>
          <div class="information-two">
              <p class="info top"><span>Top Level Domain:</span> ${retrieveCLickedCountryDetails.toplevelDomain}</p>
-             <p class="info"><span>Currencies</span>:${retrieveCLickedCountryDetails.currencies}</p>
-             <p class="info"><span>Language:</span> ${retrieveCLickedCountryDetails.languages}</p>
+             <p class="info"><span>Currencies</span>:${retrieveCLickedCountryDetails.currencies[0].name}</p>
+             <p class="info"><span>Language:</span> ${retrieveCLickedCountryDetails.languages[0].name}</p>
          </div>
     </div>
-    <div class="bottom-bottom">
-         <div class="border-countries">
-             <h3>Border Countries:</h3>
-             <button class="b-country">France</button>
-             <button class="b-country">Germany</button>
-             <button class="b-country">Netherlands</button>
-         </div>
-    </div>
+    
  </div>`
 
 console.log(
@@ -52,4 +45,11 @@ console.log(
   retrieveCLickedCountryDetails
 );
 
-  
+{/* <div class="bottom-bottom">
+<div class="border-countries">
+    <h3>Border Countries:</h3>
+    <button id="france" class="b-country">France</button>
+    <button id="Germany" class="b-country">Germany</button>
+    <button id=Netherlands"" class="b-country">Netherlands</button>
+</div>
+</div> */}

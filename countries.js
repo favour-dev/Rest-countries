@@ -11,7 +11,7 @@ const state = {
   let displayCountry = (countryList) => {
     return countryList.map(
       (country) =>
-        `<a href="./country.html?countryName=${country.name}" target="_blank" rel="noopener noreferrer">
+        `<a href="./country.html?countryName=${country.name}" rel="noopener noreferrer">
         <div data-itemCountry=${country.name}  class="country-item">
         <div class="flag">
             <img src=${country.flag} >
