@@ -36,8 +36,16 @@ countriesDetail.innerHTML =`<div class="top-right">
              <p class="info"><span>Currencies</span>:${retrieveCLickedCountryDetails.currencies[0].name}</p>
              <p class="info"><span>Language:</span> ${retrieveCLickedCountryDetails.languages[0].name}</p>
          </div>
+         
     </div>
-    
+    <div class="bottom-bottom">
+            <div class="border-countries">
+                <h3>Border Countries:</h3>
+                <button id="france" class="b-country">France</button>
+                <button id="Germany" class="b-country">Germany</button>
+                <button id=Netherlands"" class="b-country">Netherlands</button>
+            </div>
+        </div> 
  </div>`
 
 console.log(
@@ -45,11 +53,3 @@ console.log(
   retrieveCLickedCountryDetails
 );
 
-{/* <div class="bottom-bottom">
-<div class="border-countries">
-    <h3>Border Countries:</h3>
-    <button id="france" class="b-country">France</button>
-    <button id="Germany" class="b-country">Germany</button>
-    <button id=Netherlands"" class="b-country">Netherlands</button>
-</div>
-</div> */}

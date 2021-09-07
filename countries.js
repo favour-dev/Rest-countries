@@ -8,6 +8,7 @@ const state = {
 
   
   //components
+  // Loopping throught each of the array and displaying it as a card compoenet on the browser
   let displayCountry = (countryList) => {
     return countryList.map(
       (country) =>
@@ -50,7 +51,7 @@ const state = {
     countries.innerHTML = "";
     countries.innerHTML += displayCountry(countryToShow);
   };
-  
+  // fetching data from the api and loading the data as the webpage is loading
   window.addEventListener("load", async () => {
     let country = await fetch(`${baseUrl}`).then((response) => response.json());
     // state.countryList = country;
@@ -67,6 +68,8 @@ const state = {
   });
   
   //update the state action
+  // Serach field event listener thats converting the users serach word to lowercase 
+  //and filtering it to check if it matches any country record
   searchField.addEventListener("input", () => {
     let inVal = searchField.value.toLowerCase();
     if (inVal) {
