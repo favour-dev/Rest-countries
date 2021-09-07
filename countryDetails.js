@@ -3,6 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 //retrieve the parameter called countryid
 const myParam = urlParams.get("countryName");
 const countriesDetail = document.querySelector(".country-card");
+const countryBorder = document.querySelector(".bottom-bottom")
 
 console.log("the params are ", myParam);
 //retrieve the array with the matched value
@@ -11,7 +12,7 @@ let countryList = JSON.parse(countriesFromLocalStorage);
 
 let retrieveCLickedCountryDetails = countryList.find(
   (country) => country.name === myParam
-  
+
 );
 countriesDetail.innerHTML =`<div class="top-right">
      <div class="back-btn">
@@ -49,7 +50,39 @@ countriesDetail.innerHTML =`<div class="top-right">
  </div>`
 
 console.log(
-  "the retrieved country details  are ",
+  "the retrieved country details are ",
   retrieveCLickedCountryDetails
 );
 
+// let displayb = `${retrieveCLickedCountryDetails.borders}`
+// display.map((bordersss) => `<div class="border-countries">
+// <h3>Border Countries:</h3>
+// <button id="france" class="b-country">${retrieveCLickedCountryDetails.borders[0]}</button>
+// <button id="Germany" class="b-country">${retrieveCLickedCountryDetails.borders[1]}</button>
+// <button id="Netherlands" class="b-country">${retrieveCLickedCountryDetails.borders[2]}</button>
+// </div>
+// `
+// ;)
+
+
+// countryBorder.innerHTML+=`<div class="border-countries">
+// <h3>Border Countries:</h3>
+// <button id="france" class="b-country">${retrieveCLickedCountryDetails.borders[0]}</button>
+// <button id="Germany" class="b-country">${retrieveCLickedCountryDetails.borders[1]}</button>
+// <button id="Netherlands" class="b-country">${retrieveCLickedCountryDetails.borders[2]}</button>
+// </div>
+// `
+
+// function buttonEvent (){
+//      document.querySelector('.france').addEventListener('click', countryBorder)
+      
+// }
+// function countryBorder(){
+//     alert('clicked')
+       
+// }
+
+    //  location.href = 'country.html';
+    //  countryToShow = state.countryList.filter((country) =>
+     
+    //  country.name.includes(country.name)
