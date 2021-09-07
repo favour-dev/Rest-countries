@@ -32,7 +32,7 @@ countriesDetail.innerHTML =`<div class="top-right">
              <p class="info"><span>Capital:</span>${retrieveCLickedCountryDetails.capital}</p>
          </div>
          <div class="information-two">
-             <p class="info top"><span>Top Level Domain:</span> ${retrieveCLickedCountryDetails.toplevelDomain}</p>
+             <p class="info top"><span>TopLevel Domain:</span> ${retrieveCLickedCountryDetails.topLevelDomain[0]}</p>
              <p class="info"><span>Currencies</span>:${retrieveCLickedCountryDetails.currencies[0].name}</p>
              <p class="info"><span>Language:</span> ${retrieveCLickedCountryDetails.languages[0].name}</p>
          </div>
@@ -41,9 +41,9 @@ countriesDetail.innerHTML =`<div class="top-right">
     <div class="bottom-bottom">
             <div class="border-countries">
                 <h3>Border Countries:</h3>
-                <button id="france" class="b-country">France</button>
-                <button id="Germany" class="b-country">Germany</button>
-                <button id=Netherlands"" class="b-country">Netherlands</button>
+                <button id="france" class="b-country">${retrieveCLickedCountryDetails.borders[0]}</button>
+                <button id="Germany" class="b-country">${retrieveCLickedCountryDetails.borders[1]}</button>
+                <button id=Netherlands"" class="b-country">${retrieveCLickedCountryDetails.borders[2]}</button>
             </div>
         </div> 
  </div>`

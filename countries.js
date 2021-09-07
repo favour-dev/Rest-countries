@@ -82,6 +82,8 @@ const state = {
       return;
     }
   });
+
+  // filter section for each region
    function selectRegion(){
       let selectedOption = document.getElementById('region-filter')
       let selectedValue = selectedOption.options[selectedOption.selectedIndex].value
