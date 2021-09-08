@@ -23,7 +23,7 @@ const showBorder = (borders) => {
       });
       return result;
     } else {
-      return `<h3>no border</h3>`;
+      return `<p>No border</p>`;
     }
   };
   const showLanguage = (languages) => {
