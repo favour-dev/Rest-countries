@@ -21,6 +21,15 @@ h3{
     font-size:25px;
     margin-bottom: 15px;
 }
+h1{
+    /* font-size:16px; */
+    margin-top:25px;
+}
+.world{
+    width:20%;
+    height:20%;
+    margin-top: 15px;
+}
 .countries-flag img{
     width: 100%;
     border-top-left-radius: 10px;
@@ -45,6 +54,7 @@ span{
     background-color: black;
     border: none;
     border-radius: 3px;
+    margin: 10px;
 }
 .border-countries{
     margin: 50px 16px;
@@ -56,6 +66,7 @@ span{
 .moonIcon{
     width: 15%;
 }
+
 @media (min-width: 658px) {
     .country-card{
         display: flex;
@@ -73,6 +84,15 @@ span{
     }
     .bottom{
         max-width: 400px;
+    }
+    h1{
+        /* font-size:25px; */
+        margin-top:20px;
+    }
+    .world{
+        width:20%;
+        height:20%;
+        margin-top: 15px;
     }
 }
 

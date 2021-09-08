@@ -14,6 +14,29 @@ let retrieveCLickedCountryDetails = countryList.find(
   (country) => country.name === myParam
 
 );
+const showBorder = (borders) => {
+    //console.log("borders is ", borders);
+    let result = ``;
+    if (borders.length) {
+      borders.forEach((element) => {
+        result += `<button onclick="clickButton()"  class="b-country">${element}</button>`;
+      });
+      return result;
+    } else {
+      return `<h3>no border</h3>`;
+    }
+  };
+  const showLanguage = (languages) => {
+    //console.log("borders is ", borders);
+    let result = ``;
+    if (languages.length) {
+      languages.forEach((elements) => {
+        result += `${elements.name}\n`;
+      });
+      return result;
+    } 
+  };
+  
 countriesDetail.innerHTML =`<div class="top-right">
      <div class="back-btn">
          <button onclick="history.back()" class=" btn-primary"><< Back</button>
@@ -35,16 +58,14 @@ countriesDetail.innerHTML =`<div class="top-right">
          <div class="information-two">
              <p class="info top"><span>TopLevel Domain:</span> ${retrieveCLickedCountryDetails.topLevelDomain[0]}</p>
              <p class="info"><span>Currencies</span>:${retrieveCLickedCountryDetails.currencies[0].name}</p>
-             <p class="info"><span>Language:</span> ${retrieveCLickedCountryDetails.languages[0].name}</p>
+             <p class="info"><span>Language:</span> ${showLanguage(retrieveCLickedCountryDetails.languages)}</p>
          </div>
          
     </div>
     <div class="bottom-bottom">
             <div class="border-countries">
-                <h3>Border Countries:</h3>
-                <button id="france" class="b-country">${retrieveCLickedCountryDetails.borders[0]}</button>
-                <button id="Germany" class="b-country">${retrieveCLickedCountryDetails.borders[1]}</button>
-                <button id=Netherlands"" class="b-country">${retrieveCLickedCountryDetails.borders[2]}</button>
+            <h3>Border Countries:</h3>
+            ${showBorder(retrieveCLickedCountryDetails.borders)}
             </div>
         </div> 
  </div>`
@@ -53,6 +74,11 @@ console.log(
   "the retrieved country details are ",
   retrieveCLickedCountryDetails
 );
+// function clickButton(){
+//   alert('clicked')
+//   renderCountryDetails(countryDetails)
+// }
+
 
 // let displayb = `${retrieveCLickedCountryDetails.borders}`
 // display.map((bordersss) => `<div class="border-countries">

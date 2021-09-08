@@ -5,8 +5,6 @@ const state = {
   const countries = document.querySelector(".country-cards");
   const searchField = document.querySelector("#search-bar");
   
-
-  
   //components
   // Loopping throught each of the array and displaying it as a card compoenet on the browser
   let displayCountry = (countryList) => {
@@ -26,26 +24,7 @@ const state = {
        </div></a>`
     );
   };
-  
-  // let displayCountry = (countryList) => {
-  //   return countryList.map(
-  //     (country) =>
-  //       `<div data-itemCountry=${country.name}  class="country-item">
-  //     <div class="flag">
-  //         <img src=${country.flag} >
-  //     </div>
-  //     <div class="country-description">
-  //         <button class="btn">${country.name}</button>
-  //         <p>Population:${country.population}</p>
-  //         <p>Region: ${country.region}</p>
-  //         <p>Capital:${country.capital}</p>
-  //     </div>
-  //    </div>`
-  //   );
-  // };
-  
-  
-   
+
   //render
   let renderCountries = (countryToShow) => {
     countries.innerHTML = "";
@@ -68,7 +47,7 @@ const state = {
   });
   
   //update the state action
-  // Serach field event listener thats converting the users serach word to lowercase 
+  //Serach field event listener thats converting the users serach word to lowercase 
   //and filtering it to check if it matches any country record
   searchField.addEventListener("input", () => {
     let inVal = searchField.value.toLowerCase();
